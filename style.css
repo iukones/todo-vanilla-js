@@ -93,6 +93,7 @@ header h1:hover {
   color: var(--secondary-text);
   padding: 1.7em .5em;
   box-shadow: 0 10px 15px -3px var(--card-box-shadow-1),0 4px 6px -2px var(--card-box-shadow-2);
+  transition: all 0.5s ease;
 }
 .todo__item {
   flex: 1;
@@ -105,8 +106,25 @@ header h1:hover {
   padding: 1rem;
   cursor: pointer;
   font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.trash__btn:hover {
+  background-color: #e5961d;
 }
 .complete__btn {
   background-color: var(--primary);
-  margin-left: 1px;
+  margin-left: 5px;
 }
+.complete__btn:hover {
+  background-color: rgba(0,0,0,.05);
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+.completed__item {
+  text-decoration: line-through wavy var(--tertiary);
+  opacity: 0.5;
+}
+

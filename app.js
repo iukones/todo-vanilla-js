@@ -21,12 +21,12 @@ function addItem(event) {
   $itemDiv.classList.add('todo__div');
   // console.log($itemDiv);
 
-  // create list
+  // create list 🔥 
   const $listItem = document.createElement('li');
   $listItem.classList.add('todo__item');
   $listItem.innerText = $input.value;
   $itemDiv.appendChild($listItem);
-  console.log($itemDiv);
+  // console.log($itemDiv);
   
   //create button 🚫 
   const $trashButton = document.createElement('button');
@@ -46,4 +46,26 @@ function addItem(event) {
   //clear input value
   $input.value = '';
   
+}
+
+//function delete item
+function deleteCheckItem(event){
+  // console.log(event.target);
+  const $item = event.target;
+
+  // Delete Item
+  if($item.classList[0] === 'trash__btn') {
+    const $todo = $item.parentElement;
+    const $request = confirm(`Deseas eliminar el artículo...`);
+    if($request === true) {
+      $todo.remove();
+    }
+  }
+
+  //check mark item
+  if ($item.classList[0] === 'complete__btn') {
+    const $todo = $item.parentElement;
+    $todo.classList.toggle('completed__item');
+  }
+
 }
