@@ -1,3 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-text: #f5f5f5;
+  --primary-background: #f5f5f5;
+  --primary: #ffd924;
+  --secondary: #e5961d;
+  --tertiary: #cf4310;
+  --background-principal: linear-gradient(90deg, var(--secondary), var(--tertiary));
+  --card-box-shadow-1: rgba(0,0,0,.1);
+  --card-box-shadow-2: rgba(0,0,0,.05);
+
+}
+
 body {
   font-family: 'Poppins', sans-serif;
+  background: var(--background-principal);
+  color: var(--primary-text);
+  min-height: 100vh;
+}
+header {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 6rem;
+}
+header h1 {
+  text-shadow: 6px 5px 4px var(--card-box-shadow-1);
+}
+header h1:hover {
+  background-image: linear-gradient(-360deg,white, var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    text-shadow: none;
+}
+.main form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main form input, .main form button {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border: none;
+  background: var(--primary-background);
+  box-shadow: 0 10px 15px -3px var(--card-box-shadow-1),0 4px 6px -2px var(--card-box-shadow-2);
+  border-radius: 5px 0px 0 5px;
+}
+.main form > button {
+  background-color: var(--tertiary);
+  color: var(--primary-text);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0 5px 5px 0;
+  font-weight: 600;
+  font-size: .9em;
+  padding: .77em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main form > button .icon {
+  padding-left: .5rem;
+}
+.main form > button:hover {
+  background-color: var(--secondary);
 }
