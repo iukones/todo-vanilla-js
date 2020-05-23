@@ -1,1 +1,8 @@
-**Iniciando proyecto ToDo en Vanilla JS
+# Proyecto ToDo en vanilla JS
+
+Bases del proyecto.
+
+  - npm
+  - vanilla JS
+  - css
+  - fontawesome
