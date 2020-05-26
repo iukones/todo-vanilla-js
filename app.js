@@ -50,16 +50,22 @@ function addItem(event) {
 
 //function delete item
 function deleteCheckItem(event){
-  // console.log(event.target);
   const $item = event.target;
+  console.log($item);
 
   // Delete Item
   if($item.classList[0] === 'trash__btn') {
+    // console.log($item.classList[0]);
     const $todo = $item.parentElement;
+    // console.log($item.parentElement);
     const $request = confirm(`Deseas eliminar el artículo...`);
     if($request === true) {
       $todo.remove();
     }
+    //animation
+    /* $todo.classList.add('fall');
+    $todo.addEventListener('transitionend', function() {
+    }) */
   }
 
   //check mark item
