@@ -26,7 +26,7 @@ body {
 header {
   font-size: 1.5rem;
   text-align: center;
-  margin-top: 3rem;
+  margin: 2rem .5rem;
 }
 header h1 {
   text-shadow: 6px 5px 4px var(--card-box-shadow-1);
@@ -40,13 +40,19 @@ header h1:hover {
   text-shadow: none;
 }
 .main form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main .form {
   min-height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: .5em;
 }
-.main form input, .main form button {
+.main .form input, .main .form button {
   padding: .9em .3em .9em .3em;
   font-size: 1.2rem;
   border: none;
@@ -54,7 +60,7 @@ header h1:hover {
   box-shadow: 0 10px 15px -3px var(--card-box-shadow-1),0 4px 6px -2px var(--card-box-shadow-2);
   border-radius: 5px 0px 0 5px;
 }
-.main form > button {
+.main .form > button {
   background-image: linear-gradient(to top left,var(--secondary),var(--tertiary));  
   color: var(--primary-text);
   cursor: pointer;
@@ -66,10 +72,10 @@ header h1:hover {
   justify-content: center;
   align-items: center;
 }
-.main form > button .icon {
+.main .form > button .icon {
   padding-left: .3rem;
 }
-.main form > button:hover {
+.main .form > button:hover {
   background-image: linear-gradient(to top left,var(--secondary) 30%,var(--tertiary));
   text-decoration: none;
   -webkit-background-clip: border-box;
@@ -77,7 +83,7 @@ header h1:hover {
 }
 .todo__container {
   padding: 10px 20px;
-  margin: 0 0.5em 3em 0.5em;
+  margin: 3em 0.5em;
 }
 .todo__list {
   display: grid;
@@ -151,6 +157,43 @@ header h1:hover {
   transform: translateY(8rem) rotateZ(20deg);
   opacity: 0;
 } */
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  color: var(--secondary);
+  cursor: pointer;
+  width: 10rem;
+  padding: 1rem;
+  font-weight: 600;
+  border-radius: 3px;
+}
+.select {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background-image: linear-gradient(to top left,var(--secondary),var(--tertiary));
+  color: var(--primary-text);
+  top: 25px;
+  right: 0;
+  padding: .7em;
+  pointer-events: none;
+  border-radius: 0 3px 3px 0;
+  transition: all 0.3s ease;
+}
+.select:hover::after {
+  background: var(--primary-background) !important;
+  color: var(--secondary)
+}
 
 /* mobile */
 @media screen and (min-width: 1024px) {

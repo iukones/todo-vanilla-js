@@ -15,11 +15,21 @@
 
   <section class="main">
     <form action="" required>
-      <input type="text" class="form__input" >
-      <button class="form__button" type="submit">
-        Agregar
-        <i class="fas fa-plus-square icon"></i>
-      </button>  
+      <div class="form">
+        <input type="text" class="form__input" >
+        <button class="form__button" type="submit">
+          Agregar
+          <i class="fas fa-plus-square icon"></i>
+        </button>
+      </div>
+      <div class="select">
+        <label for="">Filtrar por:</label>
+        <select name="todos" class="todo__filter">
+          <option value="all">Todos</option>
+          <option value="completados">Completados</option>
+          <option value="nocompletado">Sin completar</option>
+        </select>
+      </div>
     </form>
 
     <div class="todo__container">
