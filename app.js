@@ -29,7 +29,10 @@ function addItem(event) {
   $listItem.innerText = $input.value;
   $itemDiv.appendChild($listItem);
   // console.log($itemDiv);
-  
+  //Save localStorage
+  saveLocalTodos($input.value);
+
+
   //create button 🚫 
   const $trashButton = document.createElement('button');
   $trashButton.innerHTML = '<i class="fas fa-trash"></i>';
@@ -80,9 +83,9 @@ function deleteCheckItem(event){
 
 
 function filterTodo(event) {
-  const todos = $list.childNodes;
+  const $items = $list.childNodes;
   // console.log(todos);
-  todos.forEach((todo) => {
+  $items.forEach((todo) => {
     if (todo.classList !== undefined) {
 
       switch (event.target.value) {
@@ -107,4 +110,26 @@ function filterTodo(event) {
     }
     return;
   });
+}
+
+function saveLocalTodos(todo) {
+  let $items;
+
+  if(localStorage.getItem('$items') === null) {
+    $items = [];
+  }
+  else {
+    $items = JSON.parse(localStorage.getItem('$items'));
+  }
+
+  let data = {
+      name: todo,
+      status: "uncompleted"
+  };
+
+  $items.push(data);
+  alert(data);
+
+  localStorage.setItem('$items', JSON.stringify($items));
+
 }
