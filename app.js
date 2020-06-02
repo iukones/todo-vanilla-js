@@ -63,7 +63,8 @@ function deleteCheckItem(event){
     // console.log($item.classList[0]);
     const $todo = $item.parentElement;
     // console.log($item.parentElement);
-    const $request = confirm(`Deseas eliminar "${$todo.children[0].innerText}"`);
+    const $nameItem = $todo.children[0].innerText;
+    const $request = confirm(`Deseas eliminar - "${$nameItem}"`);
     if($request === true) {
       removeLocalItem($todo);
       $todo.remove();
@@ -121,7 +122,7 @@ function saveLocalTodos(todo) {
   }
   else {
     $items = JSON.parse(localStorage.getItem('$items'));
-    console.log($items);
+    // console.log($items);
   }
   
   // Array de objetos
