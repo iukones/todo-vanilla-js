@@ -1,6 +1,6 @@
 # Preview 
 
-![Land.io Featured Image](https://drive.google.com/file/d/1z7lVeWstsrr6lYK79khX9nRtTVGYm-YB/view?usp=sharing)
+![ToDo.app Featured Image](https://market-list.netlify.app/images/preview.png)
 
 
 # Proyecto ToDo en vanilla JS
