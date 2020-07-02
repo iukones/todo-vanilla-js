@@ -157,8 +157,8 @@ header h1:hover {
   align-items: center;
 }
 .footer__container .widget {
-  display: flex;
-  margin-left: 1rem;
+  display: flex !important;
+  margin-left: 1rem !important;
 }
 /*transition para eliminar items*/
 /* .fall {
