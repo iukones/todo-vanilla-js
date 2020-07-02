@@ -156,7 +156,7 @@ header h1:hover {
   display: flex;
   align-items: center;
 }
-.footer__main .github-button {
+.footer__container span .widget.widget-lg {
   display: flex !important;
   margin-left: 1rem !important;
 }
