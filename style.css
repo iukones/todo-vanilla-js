@@ -152,6 +152,14 @@ header h1:hover {
   font-weight: 600;
   text-shadow: 6px 5px 4px var(--card-box-shadow-1);
 }
+.footer__container span {
+  display: flex;
+  align-items: center;
+}
+.footer__container .widget {
+  display: flex;
+  margin-left: 1rem;
+}
 /*transition para eliminar items*/
 /* .fall {
   transform: translateY(8rem) rotateZ(20deg);
