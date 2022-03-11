@@ -153,6 +153,12 @@ header h1:hover {
   font-weight: 600;
   text-shadow: 6px 5px 4px var(--card-box-shadow-1);
 }
+
+.footer__container .star__github {
+  display: flex !important;
+  margin-left: 1rem !important;
+  margin-top: -1rem;
+}
 /*transition para eliminar items*/
 /* .fall {
   transform: translateY(8rem) rotateZ(20deg);
