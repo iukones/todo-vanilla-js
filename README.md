@@ -11,3 +11,4 @@ Bases del proyecto.
   - vanilla JS
   - css
   - fontawesome
+  - test deploy 270525
